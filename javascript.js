@@ -5,8 +5,20 @@ var baseUrl = 'http://localhost/Lecture22Ajax/server.php',
 baseUrl = 'server.php';
 request.get(baseUrl, {}, successHome);
 
+var dataToBeRemoved = [],
+counter = 0; 
+//is this how it is done?????? And there is no way to remove from session so I use localstorage
+
 function successHome(data){
+
 	for(var person in data){
+		
+		localStorage.setItem(data[person].name, data[person].name + data[person].age + data[person].job);
+		dataToBeRemoved.push(data[person].name);
+		setTimeout(function(){
+			localStorage.removeItem(dataToBeRemoved[counter++]);
+		},30000);
+		
 		var li = document.createElement('li'),
 		a = document.createElement('a');
 		a.href = "";
