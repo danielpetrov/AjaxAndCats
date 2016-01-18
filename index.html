@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Ajax</title>
+  
+  <style>
+	body{
+		background-color: lightgreen;
+	}
+	div{
+		margin: 1%;
+		text-align: center;
+	}
+	
+	img {
+		height : 100px;
+		width : 100px;
+		margin: 0px;
+		display: block;
+	}
+	
+	li{
+		float: left;
+		list-style-type: none;
+		margin : 1%;
+		border: 1px solid black;
+		background-color: white;
+		padding: 0px;
+	}
+	li:nth-child(4n + 1){
+		clear:left;
+	}
+	a{
+		display: block;
+		text-decoration: none;
+	}
+	.show{
+		background-color: lightblue;
+		display:block;
+		height : 100px;
+		width : 100px;
+		margin: 0px;
+	}
+	.hide{
+		display: none;
+	}
+  </style>
+</head>
+
+<body>
+<ul id=output></ul>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="request.js"></script>
+<script src="javascript.js"></script>
+</body>
+</html>
